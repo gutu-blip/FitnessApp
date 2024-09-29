@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Log - FitTrack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="workout-log.html">Workout Log</a></li>
+ 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Workout Log</h1>
+        <form id="workout-log-form">
+            <label for="workout-date">Workout Date:</label>
+            <input type="date" id="workout-date" name="workout-date" required>
+
+            <label for="workout-type">Workout Type:</label>
+            <select id="workout-type" name="workout-type" required>
+                <option value="">Select workout type</option>
+                <option value="cardio">Cardio</option>
+                <option value="strength">Strength Training</option>
+                <option value="flexibility">Flexibility</option>
+                <option value="other">Other</option>
+            </select>
+
+            <div id="cardio-fields" style="display: none;">
+                <label for="cardio-exercise">Cardio Exercise:</label>
+                <input type="text" id="cardio-exercise" name="cardio-exercise">
+
+                <label for="duration">Duration (minutes):</label>
+                <input type="number" id="duration" name="duration" min="1">
+
+                <label for="distance">Distance (km):</label>
+                <input type="number" id="distance" name="distance" step="0.01" min="0">
+            </div>
+
+            <div id="strength-fields" style="display: none;">
+                <label for="strength-exercise">Strength Exercise:</label>
+                <input type="text" id="strength-exercise" name="strength-exercise">
+
+                <label for="sets">Sets:</label>
+                <input type="number" id="sets" name="sets" min="1">
+
+                <label for="reps">Reps:</label>
+                <input type="number" id="reps" name="reps" min="1">
+
+                <label for="weight">Weight (kg):</label>
+                <input type="number" id="weight" name="weight" step="0.5" min="0">
+            </div>
+
+            <label for="notes">Notes:</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+
+            <label for="intensity">Workout Intensity:</label>
+            <input type="range" id="intensity" name="intensity" min="1" max="10" value="5">
+            <output for="intensity">5</output>
+
+            <label for="mood">Mood:</label>
+            <select id="mood" name="mood">
+                <option value="great">Great</option>
+                <option value="good">Good</option>
+                <option value="okay">Okay</option>
+                <option value="tired">Tired</option>
+                <option value="exhausted">Exhausted</option>
+            </select>
+
+            <input type="submit" value="Log Workout">
+        </form>
+
+   
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitTrack. All rights reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

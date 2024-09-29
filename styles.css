@@ -1,0 +1,201 @@
+/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: -20;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* Form styles */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
+
+/* Radio button styles */
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+fieldset div {
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    fieldset div {
+        margin-bottom: 10px;
+    }
+
+    input[type="radio"] + label {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Fitness Goals styles */
+.fitness-goals {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.fitness-goals-legend {
+    font-weight: bold;
+    margin-right: 15px;
+    padding-top: 2px; 
+    }
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.checkbox-item input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .fitness-goals {
+        flex-direction: column;
+    }
+
+    .fitness-goals-legend {
+        margin-bottom: 10px;
+    }
+
+    .checkbox-group {
+        width: 100%;
+    }
+}
+
+
